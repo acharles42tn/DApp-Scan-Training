@@ -12,5 +12,3 @@ in this folder.
   MoE over the experts.
 - **Task:** file-level multi-label classification over 13 SWC classes.
   Every model sees whole files through sliding windows.
-
-How to run it on the cluster: **RUNBOOK.md**. What is in the data: **data/v3/DATA_CARD.md**.
