@@ -1,0 +1,17 @@
+# CodeBERT (125M) -- encoder baseline. 512 is its positional limit, so its windows are shorter;
+# it still sees every file in full (just in more windows).
+run_name: codebert
+model_name: claudios/codebert-base   # safetensors reupload of microsoft/codebert-base (CVE-2025-32434)
+backend: hf_encoder
+
+input_mode: window
+max_length: 512
+
+loss_type: asl
+num_epochs: 10
+batch_size: 16
+gradient_accumulation_steps: 2
+learning_rate: 2.0e-5
+early_stopping_patience: 3
+
+output_dir: ./outputs/codebert

@@ -1,0 +1,9 @@
+# The repo is edited on Windows and run on Linux: a CRLF shell script fails with
+# "/bin/bash^M: bad interpreter". Force LF on checkout.
+* text=auto eol=lf
+*.parquet binary
+*.pt binary
+*.npz binary
+*.safetensors binary
+*.png binary
+*.pdf binary

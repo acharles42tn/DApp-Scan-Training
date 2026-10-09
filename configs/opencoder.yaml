@@ -1,0 +1,22 @@
+# OpenCoder-1.5B-Base -- decoder pretrained on ~90% code; bf16 + LoRA; needs trust_remote_code.
+run_name: opencoder
+model_name: infly/OpenCoder-1.5B-Base
+backend: hf_decoder
+
+input_mode: window
+max_length: 1024
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_target_modules: [q_proj, v_proj, k_proj, o_proj]
+
+loss_type: asl
+num_epochs: 10
+batch_size: 4
+gradient_accumulation_steps: 8
+learning_rate: 3.0e-5
+early_stopping_patience: 3
+gradient_checkpointing: true
+
+output_dir: ./outputs/opencoder

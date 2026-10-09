@@ -1,0 +1,575 @@
+{
+  "dataset": "DAppSCAN-source",
+  "version": "dappscan_v3_all",
+  "source_repo": "https://github.com/InPlusLab/DAppSCAN",
+  "source_commit": "66a56619c44770e05c2db600fa6468115ff0dcd5",
+  "pinned_commit": "66a56619c44770e05c2db600fa6468115ff0dcd5",
+  "built_at": "2026-10-09T03:16:50+00:00",
+  "builder": "scvd_dapp.build_dataset",
+  "params": {
+    "min_class_files": 1,
+    "n_folds": 5,
+    "seed": 42,
+    "keep_project_level": true,
+    "keep_interfaces": false,
+    "keep_tests": false,
+    "near_dup_threshold": 0.8,
+    "near_dup_group_cap": 300,
+    "canonical_layout": "markers stripped; tabs->4 spaces; trailing whitespace and blank lines removed",
+    "default_test_fold": 0,
+    "default_val_fold": 1,
+    "eval_min_files": 20
+  },
+  "classes": [
+    {
+      "index": 0,
+      "swc": "SWC-135",
+      "title": "Code With No Effects",
+      "n_files": 203,
+      "n_rows": 203,
+      "per_fold": [
+        40,
+        43,
+        42,
+        37,
+        41
+      ]
+    },
+    {
+      "index": 1,
+      "swc": "SWC-101",
+      "title": "Integer Overflow and Underflow",
+      "n_files": 136,
+      "n_rows": 136,
+      "per_fold": [
+        27,
+        28,
+        28,
+        25,
+        28
+      ]
+    },
+    {
+      "index": 2,
+      "swc": "SWC-107",
+      "title": "Reentrancy",
+      "n_files": 113,
+      "n_rows": 113,
+      "per_fold": [
+        22,
+        25,
+        23,
+        20,
+        23
+      ]
+    },
+    {
+      "index": 3,
+      "swc": "SWC-102",
+      "title": "Outdated Compiler Version",
+      "n_files": 112,
+      "n_rows": 112,
+      "per_fold": [
+        22,
+        24,
+        23,
+        20,
+        23
+      ]
+    },
+    {
+      "index": 4,
+      "swc": "SWC-103",
+      "title": "Floating Pragma",
+      "n_files": 92,
+      "n_rows": 92,
+      "per_fold": [
+        18,
+        20,
+        19,
+        16,
+        19
+      ]
+    },
+    {
+      "index": 5,
+      "swc": "SWC-104",
+      "title": "Unchecked Call Return Value",
+      "n_files": 74,
+      "n_rows": 74,
+      "per_fold": [
+        15,
+        16,
+        15,
+        13,
+        15
+      ]
+    },
+    {
+      "index": 6,
+      "swc": "SWC-114",
+      "title": "Transaction Order Dependence",
+      "n_files": 74,
+      "n_rows": 74,
+      "per_fold": [
+        15,
+        16,
+        15,
+        13,
+        15
+      ]
+    },
+    {
+      "index": 7,
+      "swc": "SWC-128",
+      "title": "DoS With Block Gas Limit",
+      "n_files": 73,
+      "n_rows": 73,
+      "per_fold": [
+        15,
+        16,
+        14,
+        13,
+        15
+      ]
+    },
+    {
+      "index": 8,
+      "swc": "SWC-100",
+      "title": "Function Default Visibility",
+      "n_files": 42,
+      "n_rows": 42,
+      "per_fold": [
+        9,
+        9,
+        8,
+        7,
+        9
+      ]
+    },
+    {
+      "index": 9,
+      "swc": "SWC-131",
+      "title": "Presence of unused variables",
+      "n_files": 40,
+      "n_rows": 40,
+      "per_fold": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "index": 10,
+      "swc": "SWC-105",
+      "title": "Unprotected Ether Withdrawal",
+      "n_files": 37,
+      "n_rows": 37,
+      "per_fold": [
+        8,
+        8,
+        7,
+        6,
+        8
+      ]
+    },
+    {
+      "index": 11,
+      "swc": "SWC-116",
+      "title": "Block values as a proxy for time",
+      "n_files": 36,
+      "n_rows": 36,
+      "per_fold": [
+        8,
+        8,
+        7,
+        6,
+        7
+      ]
+    },
+    {
+      "index": 12,
+      "swc": "SWC-108",
+      "title": "State Variable Default Visibility",
+      "n_files": 31,
+      "n_rows": 31,
+      "per_fold": [
+        7,
+        7,
+        6,
+        5,
+        6
+      ]
+    },
+    {
+      "index": 13,
+      "swc": "SWC-113",
+      "title": "DoS with Failed Call",
+      "n_files": 24,
+      "n_rows": 24,
+      "per_fold": [
+        5,
+        5,
+        5,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 14,
+      "swc": "SWC-119",
+      "title": "Shadowing State Variables",
+      "n_files": 21,
+      "n_rows": 21,
+      "per_fold": [
+        4,
+        4,
+        4,
+        5,
+        4
+      ]
+    },
+    {
+      "index": 15,
+      "swc": "SWC-120",
+      "title": "Weak Sources of Randomness from Chain Attributes",
+      "n_files": 13,
+      "n_rows": 13,
+      "per_fold": [
+        4,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 16,
+      "swc": "SWC-123",
+      "title": "Requirement Violation",
+      "n_files": 12,
+      "n_rows": 12,
+      "per_fold": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 17,
+      "swc": "SWC-129",
+      "title": "Typographical Error",
+      "n_files": 10,
+      "n_rows": 10,
+      "per_fold": [
+        4,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "index": 18,
+      "swc": "SWC-126",
+      "title": "Insufficient Gas Griefing",
+      "n_files": 9,
+      "n_rows": 9,
+      "per_fold": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "index": 19,
+      "swc": "SWC-112",
+      "title": "Delegatecall to Untrusted Callee",
+      "n_files": 8,
+      "n_rows": 8,
+      "per_fold": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "index": 20,
+      "swc": "SWC-110",
+      "title": "Assert Violation",
+      "n_files": 7,
+      "n_rows": 7,
+      "per_fold": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 21,
+      "swc": "SWC-111",
+      "title": "Use of Deprecated Solidity Functions",
+      "n_files": 7,
+      "n_rows": 7,
+      "per_fold": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "index": 22,
+      "swc": "SWC-115",
+      "title": "Authorization through tx.origin",
+      "n_files": 7,
+      "n_rows": 7,
+      "per_fold": [
+        1,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 23,
+      "swc": "SWC-134",
+      "title": "Message call with hardcoded gas amount",
+      "n_files": 7,
+      "n_rows": 7,
+      "per_fold": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "index": 24,
+      "swc": "SWC-122",
+      "title": "Lack of Proper Signature Verification",
+      "n_files": 5,
+      "n_rows": 5,
+      "per_fold": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "index": 25,
+      "swc": "SWC-124",
+      "title": "Write to Arbitrary Storage Location",
+      "n_files": 5,
+      "n_rows": 5,
+      "per_fold": [
+        0,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 26,
+      "swc": "SWC-125",
+      "title": "Incorrect Inheritance Order",
+      "n_files": 4,
+      "n_rows": 4,
+      "per_fold": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 27,
+      "swc": "SWC-106",
+      "title": "Unprotected SELFDESTRUCT Instruction",
+      "n_files": 3,
+      "n_rows": 3,
+      "per_fold": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "swc": "SWC-117",
+      "title": "Signature Malleability",
+      "n_files": 3,
+      "n_rows": 3,
+      "per_fold": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 29,
+      "swc": "SWC-118",
+      "title": "Incorrect Constructor Name",
+      "n_files": 3,
+      "n_rows": 3,
+      "per_fold": [
+        0,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 30,
+      "swc": "SWC-121",
+      "title": "Missing Protection against Signature Replay Attacks",
+      "n_files": 3,
+      "n_rows": 3,
+      "per_fold": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "index": 31,
+      "swc": "SWC-133",
+      "title": "Hash Collisions With Multiple Variable Length Arguments",
+      "n_files": 3,
+      "n_rows": 3,
+      "per_fold": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 32,
+      "swc": "SWC-132",
+      "title": "Unexpected Ether balance",
+      "n_files": 2,
+      "n_rows": 2,
+      "per_fold": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 33,
+      "swc": "SWC-109",
+      "title": "Uninitialized Storage Pointer",
+      "n_files": 1,
+      "n_rows": 1,
+      "per_fold": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "eval_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "eval_min_files": 20,
+  "excluded_classes": {
+    "project_level": [],
+    "rare": []
+  },
+  "counts": {
+    "annotation_files": 948,
+    "annotation_instances": 1646,
+    "codebase_merges_near_dup": 168,
+    "codebases": 510,
+    "dropped_empty": 2,
+    "dropped_interface_only": 4147,
+    "dropped_test_mock": 3726,
+    "in_scope_files": 13582,
+    "line_beyond_eof": 2,
+    "line_from_marker": 8,
+    "line_marker": 8,
+    "line_ranges": 1627,
+    "line_whole": 11,
+    "markers_stripped": 1647,
+    "rows": 9492,
+    "sol_files": 21457,
+    "spans_merged_from_copies": 54,
+    "unique_files": 9492,
+    "excluded_labeled_files": 0,
+    "positive_rows": 918,
+    "negative_rows": 8574,
+    "groups": 342,
+    "largest_group_rows": 391
+  },
+  "folds": {
+    "rows": [
+      1925,
+      1717,
+      1783,
+      2253,
+      1814
+    ],
+    "positive_rows": [
+      175,
+      196,
+      180,
+      174,
+      193
+    ]
+  },
+  "leakage": {
+    "near_dup_threshold": 0.8,
+    "near_dup_pairs": 3067,
+    "cross_fold_pairs": 956,
+    "rows_with_cross_fold_twin": 0.089,
+    "test_rows_with_train_twin": 0.1179,
+    "test_positive_rows_with_train_twin": 0.0229,
+    "val_rows_with_train_twin": 0.0326,
+    "exact_duplicates_across_folds": 0
+  },
+  "fingerprint": "2dac42463f25ac1fc8f21e67ef378beaca222eea715485da8168ca8292170401"
+}

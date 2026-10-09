@@ -1,0 +1,24 @@
+# CodeLlama-7B -- decoder + LoRA (bf16; fits the 40 GB A100 at batch 1 with gradient checkpointing).
+run_name: codellama
+model_name: codellama/CodeLlama-7b-hf
+backend: hf_decoder
+
+input_mode: window
+max_length: 1024
+
+load_in_8bit: false
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: [q_proj, v_proj, k_proj, o_proj]
+
+loss_type: asl
+num_epochs: 10
+batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 3.0e-5
+early_stopping_patience: 3
+gradient_checkpointing: true
+
+output_dir: ./outputs/codellama

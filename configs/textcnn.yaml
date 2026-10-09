@@ -1,0 +1,23 @@
+# TextCNN -- from-scratch baseline, no pretraining. Word-level windows; Adam + BCE as in scvd.
+run_name: textcnn
+model_name: textcnn-scratch       # unused by this backend
+backend: textcnn
+
+input_mode: window
+max_length: 1024                  # words per window
+
+vocab_size: 30000
+min_token_freq: 2
+embed_dim: 300
+num_filters: 256
+filter_sizes: [3, 4, 5]
+cnn_dropout: 0.5
+
+num_epochs: 10
+batch_size: 32
+gradient_accumulation_steps: 1
+learning_rate: 0.001
+weight_decay: 1.0e-5
+early_stopping_patience: 3
+
+output_dir: ./outputs/textcnn

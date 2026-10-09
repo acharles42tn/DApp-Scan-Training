@@ -1,0 +1,17 @@
+# MoE gate over finished single-model runs (python -m scvd_dapp moe). CPU, minutes.
+# Experts = the active lineup from the Slither study: ModernBERT, SecureBERT 2.0, CodeLlama + OpenMythos.
+run_name: moe
+experts: [modernbert, securebert2, codellama, openmythos]
+outputs_root: ./outputs
+output_dir: ./outputs/moe
+
+gating_hidden_dim: 512
+gating_epochs: 50
+gating_lr: 3.0e-4
+gating_batch_size: 64
+top_k: 4
+load_balance_weight: 0.5
+early_stopping_patience: 8
+
+temperature_scaling: true
+optimize_thresholds: true

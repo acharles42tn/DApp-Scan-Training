@@ -1,0 +1,34 @@
+# v3s: securebert2 started from its Slither-trained weights (backbone_init), on the balanced table (data/v3/dappscan_v3.parquet: every labelled file, 1 unlabelled file per
+# labelled file in every fold, all 34 SWC types trained, the 15 with >= 20 files scored), stronger
+# oversampling of rare types. Same model settings as v2. See RUNBOOK "v3".
+run_name: securebert2_v3s
+model_name: cisco-ai/SecureBERT2.0-base
+backend: hf_encoder
+training_unit: file
+backbone_init: /work/projects/phd-acharles42/acharles42/code/Training_Code/outputs/securebert2/final_model
+parquet_path: data/v3/dappscan_v3.parquet
+
+input_mode: window
+max_length: 1024
+freeze_frac: 0.5
+max_windows_train: 16
+window_batch: 16
+eval_window_batch: 32
+files_per_step: 16
+gradient_checkpointing: true
+
+learning_rate: 1.0e-5
+head_learning_rate: 5.0e-4
+weight_decay: 0.01
+warmup_ratio: 0.1
+head_dropout: 0.1
+num_epochs: 8
+early_stopping_patience: 2
+
+neg_ratio: 1.0                       # the table is already balanced: use every unlabelled train file
+file_oversample_threshold: 100
+file_oversample_target: 200
+oversample_max_factor: 5.0
+pos_weight_cap: 10.0
+dataloader_num_workers: 0
+output_dir: ./outputs/v3/securebert2_v3s_f0

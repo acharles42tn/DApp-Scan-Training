@@ -1,0 +1,23 @@
+# Qwen3-1.7B-Base -- decoder + LoRA. Window 1024 like the encoders (the Slither run used 512,
+# which was one source of the context confound in that table).
+run_name: qwen3
+model_name: Qwen/Qwen3-1.7B-Base
+backend: hf_decoder
+
+input_mode: window
+max_length: 1024
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_target_modules: [q_proj, v_proj, k_proj, o_proj]
+
+loss_type: asl
+num_epochs: 10
+batch_size: 4
+gradient_accumulation_steps: 8
+learning_rate: 3.0e-5
+early_stopping_patience: 3
+gradient_checkpointing: true
+
+output_dir: ./outputs/qwen3

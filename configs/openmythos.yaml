@@ -1,0 +1,25 @@
+# OpenMythos-770M -- recurrent-depth transformer classifier. Runs in the openmythos env (SC.sh picks it).
+# No public pretrained weights exist, so the backbone starts from the project's Slither-trained
+# checkpoint and gets a fresh head for the DAppSCAN classes (the HF models start from their public
+# pretrained weights instead -- report this next to the number).
+# TODO(Lucas): check lr / n_loops / batch against Open-Mythos/train_classifier.py.
+run_name: openmythos
+model_name: openai/gpt-oss-20b    # the tokenizer OpenMythos was trained with
+backend: openmythos
+
+mythos_size: 770m
+# mythos_init_ckpt defaults to $SCVD_ROOT/experiments/2026-05_swc_pretrain/checkpoints/swc_770m_v1/step_00012500_final.pt
+mythos_n_loops: 4
+
+input_mode: window
+max_length: 1024
+
+loss_type: asl
+num_epochs: 10
+batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-5
+weight_decay: 0.01
+early_stopping_patience: 3
+
+output_dir: ./outputs/openmythos

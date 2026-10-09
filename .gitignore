@@ -1,0 +1,21 @@
+# outputs, logs, caches
+outputs/*
+!outputs/.gitkeep
+logs/*
+!logs/.gitkeep
+.cache/
+*.log
+__pycache__/
+*.py[cod]
+
+# raw DAppSCAN checkout (re-fetch with fetch_dappscan.sh)
+data/raw/
+
+# model artifacts
+*.pt
+*.bin
+*.safetensors
+*.npz
+
+# built tables: they contain the DAppSCAN contracts' source code; rebuild them (README, "Getting the data")
+data/**/*.parquet

@@ -1,0 +1,36 @@
+# v2 (file-level): CodeLlama-7B + LoRA (bf16, gradient checkpointing) on the top half of the layers only (r 8), trained on whole files
+# (windows pooled by per-class attention), early stopping on validation loss. See RUNBOOK "v2".
+run_name: codellama_v2
+model_name: codellama/CodeLlama-7b-hf
+backend: hf_decoder
+training_unit: file
+
+input_mode: window
+max_length: 1024
+freeze_frac: 0.5
+use_lora: true
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: [q_proj, v_proj, k_proj, o_proj]
+max_windows_train: 6
+window_batch: 6
+eval_window_batch: 8
+files_per_step: 16
+gradient_checkpointing: true
+
+learning_rate: 3.0e-5
+head_learning_rate: 5.0e-4
+weight_decay: 0.01
+warmup_ratio: 0.1
+head_dropout: 0.1
+num_epochs: 8
+early_stopping_patience: 2
+
+neg_ratio: 0.3
+file_oversample_threshold: 50
+file_oversample_target: 150
+oversample_max_factor: 5.0
+pos_weight_cap: 10.0
+dataloader_num_workers: 0
+output_dir: ./outputs/v2/codellama_f0

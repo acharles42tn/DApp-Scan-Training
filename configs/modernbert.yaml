@@ -1,0 +1,17 @@
+# ModernBERT-large (395M) -- encoder, full fine-tune. Hyperparameters as in the Slither run
+# (Training_Code/configs/modernbert.yaml); only the data, windowing and epoch budget differ.
+run_name: modernbert
+model_name: answerdotai/ModernBERT-large
+backend: hf_encoder
+
+input_mode: window
+max_length: 1024          # tokens per window; every model sees the whole file through windows
+
+loss_type: asl
+num_epochs: 10            # max; early stopping on val file macro-AP picks the epoch
+batch_size: 8
+gradient_accumulation_steps: 2
+learning_rate: 2.0e-5
+early_stopping_patience: 3
+
+output_dir: ./outputs/modernbert

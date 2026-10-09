@@ -1,0 +1,31 @@
+# v2 (file-level): ModernBERT-large. Trained on whole files (windows pooled by per-class attention),
+# bottom half of the layers frozen, lower LR, early stopping on validation loss. See RUNBOOK "v2".
+run_name: modernbert_v2
+model_name: answerdotai/ModernBERT-large
+backend: hf_encoder
+training_unit: file
+
+input_mode: window
+max_length: 1024
+freeze_frac: 0.5
+max_windows_train: 16
+window_batch: 16
+eval_window_batch: 32
+files_per_step: 16
+gradient_checkpointing: true
+
+learning_rate: 1.0e-5
+head_learning_rate: 5.0e-4
+weight_decay: 0.01
+warmup_ratio: 0.1
+head_dropout: 0.1
+num_epochs: 8
+early_stopping_patience: 2
+
+neg_ratio: 0.3
+file_oversample_threshold: 50
+file_oversample_target: 150
+oversample_max_factor: 5.0
+pos_weight_cap: 10.0
+dataloader_num_workers: 0
+output_dir: ./outputs/v2/modernbert_f0

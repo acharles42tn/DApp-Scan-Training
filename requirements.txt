@@ -1,0 +1,15 @@
+# Nothing new to install on the cluster: SCenv (training) and the openmythos conda env
+# (OpenMythos only) already have everything. Listed for reference / a fresh machine.
+# SCenv: python 3.10.13, torch 2.5.1+cu121, transformers 5.5.4, peft 0.13.2
+# openmythos env: python 3.11.15, torch 2.11.0+cu130, transformers 5.7.0, peft 0.20.0, open_mythos
+torch>=2.5.1
+transformers>=5.5.4
+peft>=0.13.2
+accelerate
+datasets
+scikit-learn
+pandas
+numpy
+pyarrow
+pyyaml
+safetensors
